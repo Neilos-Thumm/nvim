@@ -1,9 +1,10 @@
 return {
   "folke/snacks.nvim",
-  opts = {
-    picker = {
-      sources = {
-        marks = {
+  keys = {
+    {
+      "<leader>O",
+      function()
+        Snacks.picker.marks({
           confirm = function(picker, item)
             picker:close()
             if not item then
@@ -40,8 +41,9 @@ return {
               pcall(vim.api.nvim_win_set_cursor, 0, { row, col })
             end)
           end,
-        },
-      },
+        })
+      end,
+      desc = "Marks (Jump to Window across Tabs)",
     },
   },
 }
