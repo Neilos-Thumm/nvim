@@ -15,6 +15,8 @@ vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#8892a8" })
 vim.api.nvim_set_hl(0, "WinBar", { link = "CursorLineNr" })
 vim.api.nvim_set_hl(0, "WinBarNC", { link = "CursorLineNr" })
 --
+--Change winbar to only file name and include edit status
+vim.opt.winbar = " %t %m"
 -- Remap escape from terminal
 vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]])
 -- split into 2x2
