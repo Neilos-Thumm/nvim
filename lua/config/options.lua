@@ -7,3 +7,7 @@ vim.opt.winbar = "%f"
 
 -- disable shared clipboard in nvim
 vim.opt.clipboard = ""
+
+vim.api.nvim_create_user_command("LP", "LivePreview start", {})
+
+vim.api.nvim_create_user_command("LC", "LivePreview close", {})
