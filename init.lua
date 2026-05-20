@@ -7,11 +7,14 @@ require("config.lazy")
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#8892a8" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#8892a8" })
 --
--- Change winbar color
+-- Change winbar color (manual)
 -- vim.api.nvim_set_hl(0, "WinBar", { bold = true, fg = "#e0e0e0" })
 -- vim.api.nvim_set_hl(0, "WinBarNC", { bold = true, fg = "#e0e0e0" })
 --
---Change winbar color to always match current rline color
+-- Change cursorline color to match TokyoNight's (when not using TokyoNight)
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9e64", bold = true })
+--
+--Change winbar color to always match current cursorline color
 vim.api.nvim_set_hl(0, "WinBar", { link = "CursorLineNr" })
 vim.api.nvim_set_hl(0, "WinBarNC", { link = "CursorLineNr" })
 --
