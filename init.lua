@@ -14,7 +14,15 @@ vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#8892a8" })
 -- Change cursorline color to match TokyoNight's (when not using TokyoNight)
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9e64", bold = true })
 --
---Change winbar color to always match current cursorline color
+-- Change indentline color to match TokyoNight's
+-- vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#7aa2f7" })
+-- vim.api.nvim_set_hl(0, "MiniIndentscopeSymbol", { fg = "#7aa2f7" })
+--
+-- Change indentline color to match current cursorline color
+vim.api.nvim_set_hl(0, "SnacksIndentScope", { link = "CursorLineNr" })
+vim.api.nvim_set_hl(0, "MiniIndentscopeSymbol", { link = "CursorLineNr" })
+--
+--Change winbar color to match current cursorline color
 vim.api.nvim_set_hl(0, "WinBar", { link = "CursorLineNr" })
 vim.api.nvim_set_hl(0, "WinBarNC", { link = "CursorLineNr" })
 --
