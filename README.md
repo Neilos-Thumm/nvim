@@ -11,7 +11,9 @@ ___
 
 ## snacks-jump
 (this is an addition to `<leader>space` or `<leader>,` which fzf unopened buffer and opened buffer respectively but doesn't jump to it)
-- fzf opened buffer and jump to it
+- fzf opened buffer (that's inside a specific window) and jump to it
+  - if the selected opened buffer doesn't occupy a specific window, then it replaces the current window
+  - the list always show the last visited window on top while filter out the window it's currently only when firing the command
 
 ___
 # Colorscheme
