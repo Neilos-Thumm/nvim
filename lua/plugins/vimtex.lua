@@ -22,6 +22,11 @@ return {
       sections = 0,
       styles = 1,
     }
+    vim.g.vimtex_toc_config = {
+      hide_line_numbers = 0,
+      split_width = 40, -- wider window if entries get cut off
+      todo_sorted = 0, -- show TODOs inline by position, not grouped at top
+    }
     -- optional: match SeniorMars's engine choice
     -- vim.g.vimtex_compiler_latexmk_engines = { ["_"] = "-lualatex -shell-escape" }
   end,
