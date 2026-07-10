@@ -21,6 +21,19 @@ This is a custom catppuccin-mocha theme with the current line number's color of 
 and link the winbar as well as indent line to that same color
 
 ___
+# Preview
+
+## Home Page
+<img src="images/Preview-home.png">
+
+## Default use case
+<img src="images/Preview-normal.png">
+
+## LaTeX use case
+<img src="images/Preview-LaTeX.png">
+
+
+___
 # This config relies heavily on 💤 LazyVim
 
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
