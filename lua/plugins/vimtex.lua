@@ -4,6 +4,10 @@ return {
   init = function()
     vim.g.vimtex_view_method = "skim"
     vim.g.vimtex_compiler_method = "latexmk"
+    vim.g.vimtex_compiler_latexmk = { -- move aux file into build/
+      aux_dir = "texbuild",
+      out_dir = "",
+    }
     vim.g.vimtex_quickfix_mode = 0 -- don't auto-pop the error list
     vim.g.vimtex_view_skim_sync = 1 -- sync Skim's position after compile
     vim.g.vimtex_view_skim_activate = 1 -- bring Skim to focus after compile
