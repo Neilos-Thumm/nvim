@@ -55,3 +55,11 @@ vim.keymap.set("n", "`", function()
     vim.cmd("normal! `" .. c)
   end
 end)
+
+vim.keymap.set("n", "<leader>gF", function()
+  vim.ui.input({ prompt = "Diff against: ", completion = "file" }, function(f)
+    if f and f ~= "" then
+      vim.cmd("vert diffsplit " .. f)
+    end
+  end)
+end, { desc = "Diff buffer against file" })
