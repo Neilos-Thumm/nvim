@@ -63,3 +63,16 @@ vim.keymap.set("n", "<leader>gF", function()
     end
   end)
 end, { desc = "Diff buffer against file" })
+
+vim.keymap.set("n", "<leader>gm", function()
+  Snacks.picker.git_log_file({
+    confirm = function(picker, item)
+      picker:close()
+      if item then
+        vim.schedule(function()
+          require("gitsigns").diffthis(item.commit)
+        end)
+      end
+    end,
+  })
+end, { desc = "Diff against a commit (pick)" })
