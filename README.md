@@ -15,6 +15,13 @@ ___
   - if the selected opened buffer doesn't occupy a specific window, then it replaces the current window
   - the list always show the last visited window on top while filter out the window it's currently only when firing the command
 
+## snacks-diff
+- space + g + F
+	- anchor current file and diff against another file
+
+## snacks-commit-diff
+- space + g + m
+	- diff against a commit (for side by side view unlike the native `<leader>gf`)
 ___
 # Colorscheme
 This is a custom catppuccin-mocha theme with the current line number's color of tokyonight's
