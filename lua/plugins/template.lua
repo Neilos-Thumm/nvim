@@ -1,6 +1,6 @@
 -- :T  →  pick a template from ~/Documents/Template matching the current file's
 --        extension and insert it, but only if the current buffer is empty.
-local template_dir = "/Users/parunthummadetsak/Documents/Template"
+local template_dir = vim.fn.stdpath("config") .. "/templates"
 
 return {
   {
