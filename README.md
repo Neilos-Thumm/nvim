@@ -21,7 +21,14 @@ ___
 
 ## snacks-commit-diff
 - space + g + m
-	- diff against a commit (for side by side view unlike the native `<leader>gf`)
+	- commit diff file in specific commit <span style="color:rgb(255, 138, 138)">against current local version</span>
+		- pressed: can be use to <span style="color:rgb(255, 138, 138)">view side by side</span> diff current local against that commit commit
+
+supposed to work in parallel with 
+- space + g + f (native)
+	- commit diff file in specific commit <span style="color:rgb(255, 138, 138)">against its previous commit</span>
+		- pressed: can use for <span style="color:rgb(255, 138, 138)">checking out</span>
+		- can also be used for applying individual patch 
 ___
 # Colorscheme
 This is a custom catppuccin-mocha theme with the current line number's color of tokyonight's

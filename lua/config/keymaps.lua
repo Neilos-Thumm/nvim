@@ -65,7 +65,23 @@ vim.keymap.set("n", "<leader>gF", function()
 end, { desc = "Diff buffer against file" })
 
 vim.keymap.set("n", "<leader>gm", function()
+  local file = vim.api.nvim_buf_get_name(0)
+  local dir = vim.fs.dirname(file)
+
   Snacks.picker.git_log_file({
+    preview = function(ctx)
+      local commit = ctx.item and ctx.item.commit
+      if not commit then
+        return
+      end
+      local lines = vim.fn.systemlist({ "git", "-C", dir, "diff", commit, "--", file })
+      if #lines == 0 then
+        lines = { "No differences: your saved file matches this commit." }
+      end
+      ctx.preview:reset()
+      ctx.preview:set_lines(lines)
+      ctx.preview:highlight({ ft = "diff" })
+    end,
     confirm = function(picker, item)
       picker:close()
       if item then
@@ -75,4 +91,4 @@ vim.keymap.set("n", "<leader>gm", function()
       end
     end,
   })
-end, { desc = "Diff against a commit (pick)" })
+end, { desc = "Diff current file against a commit (pick)" })
