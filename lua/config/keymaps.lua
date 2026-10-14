@@ -59,7 +59,8 @@ end)
 vim.keymap.set("n", "<leader>gF", function()
   vim.ui.input({ prompt = "Diff against: ", completion = "file" }, function(f)
     if f and f ~= "" then
-      vim.cmd("vert diffsplit " .. f)
+      vim.cmd("vert leftabove diffsplit " .. vim.fn.fnameescape(f))
+      vim.cmd("wincmd p")
     end
   end)
 end, { desc = "Diff buffer against file" })
